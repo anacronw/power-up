@@ -25,7 +25,7 @@
         "icon": ""
     },
     {
-        "name": "Refridgerator",
+        "name": "Refrigerator",
         "power": 700,
         "icon": ""
     },
@@ -106,7 +106,7 @@
     },
     {
         "name": "Clothing Iron",
-        "power": "1400",
+        "power": 1400,
         "icon": ""
     }
 ]
