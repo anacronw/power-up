@@ -1,8 +1,21 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+#watts {
+	font-size: 100px;
+	text-align: center;
+	color: green;
 }
-
-a {
-  color: #00B7FF;
+.device-btn{
+	height: 100px;
+	color: green;
+	background-color: lightgray;
+}
+.row{
+	margin-bottom: 5px;
+}
+#question{
+	font-size: 35px;
+	text-align: center;
+	color: green;
+}
+body{
+	background-color: black;
 }
