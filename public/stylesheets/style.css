@@ -7,6 +7,16 @@ body {
 }
 #question{
 	text-align: center;
+  font-size: 30px;
+  position: relative;
+  top: 50px;
+}
+#question.text-success{
+  top: 0;
+}
+button > i {
+  margin-top: 8px;
+  font-size: 24px;
 }
 .page {
   padding: 50px 0;

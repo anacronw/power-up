@@ -4,11 +4,13 @@
     <title>Power Up!</title>
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <div class="container-fluid">
       <div class="page" style="display: block">
         <div class="jumbotron">
+          <i class="fa fa-bolt" style="font-size: 250px; color: #E3E02D"></i>
           <p class="lead">Power Up will track your current energy efficiency by the devices you have at home.</p>
           <p>Simply go around the house and turn on devices one by one and register them through Power Up.</p>
           <button id="start-btn" class="btn btn-primary btn-lg btn-block">Try it Now!</button>
@@ -24,11 +26,13 @@
         <div class="row"><div id="question" class="col-xs-12">(Turn on a device in your home)</div></div>
         <div class="row" id="buttons-container">
         </div>
-        <button id="continue-btn" class="btn btn-primary btn-lg btn-block">I'm done</button>
+        <button id="continue-btn" class="btn btn-success btn-lg btn-block">I'm done</button>
       </div>
       <div class="page">
-        <canvas id="line-analysis" width="600" height="400"></canvas>
-        <canvas id="pie-analysis" width="600" height="400"></canvas>
+        <h3>Here's your total current usage:</h3>
+        <canvas id="line-analysis" width="600" height="300"></canvas>
+        <h3>Here's how much each device is consuming:</h3>
+        <canvas id="pie-analysis" width="600" height="300"></canvas>
       </div>
       <script src="/socket.io/socket.io.js"></script>
       <script src="javascripts/moment.min.js"></script>

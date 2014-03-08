@@ -11,7 +11,7 @@ var lineData = {
     pointColor : "rgba(220,220,220,1)",
     pointStrokeColor : "#fff",
     data: []
-  }
+    }
   ]
 };
 var pieData = []
@@ -32,7 +32,7 @@ $.getJSON('/api/usage', function(info){
 
     lineData.labels = lineData.labels.splice(-20);
     lineData.datasets[0].data = lineData.datasets[0].data.splice(-20);
-    lineChart.Line(lineData, {animation: false});
+    lineChart.Line(lineData, {animation: false, scaleOverride: true, scaleSteps: 15, scaleStartValue: 1800, scaleStepWidth: 200});
 
     // update pie data
     var pieData = [];
@@ -47,15 +47,18 @@ $.getJSON('/api/usage', function(info){
 });
 socket.on('update', function(newWattage){
   wattage = newWattage;
+  console.log(wattage);
   $.getJSON('/api/guess/devices', function(devices){
-    $('#question').html('Did you turn one of these on?');
+    $('#question').html('Did you turn one of these on?').toggleClass('text-success');
+    $('#buttons-container').empty();
     devices.forEach(function(device){
-      $('#buttons-container').append('<div class="col-xs-4"><button class="btn btn-primary btn-lg btn-block device-btn">' + device.name + '</button></div>');
+      $('#buttons-container').append('<div class="col-xs-4"><button class="btn btn-info btn-lg btn-block device-btn slideUp" data-name="' + device.name + '">' + device.name + '<br /><i class="fa ' + device.icon + '"></i></button></div>');
     });
-    $('#buttons-container').append('<div class="col-xs-4"><button class="btn btn-primary btn-lg btn-block device-btn">Other...</button></div>');
+    $('#buttons-container').append('<div class="col-xs-4"><button class="btn btn-lg btn-block device-btn">Other...</button></div>');
+    $('#buttons-container').hide().fadeIn(1000);
     $('.device-btn').click(function(){
-        $.post('/api/device', {name: $(this).html()}, function(){
-          $('#question').html('Great!  Let\'s do another one! <br /> (Turn on another device)');
+        $.post('/api/device', {name: $(this).data('name')}, function(){
+          $('#question').html('Great!  Let\'s do another one! <br /> (Turn on another device)').toggleClass('text-success');
           $('#buttons-container').empty();
         });
     });

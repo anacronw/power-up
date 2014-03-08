@@ -37,20 +37,19 @@ server.listen(app.get('port'), function(){
 });
 var wattage = 2000;
 var lastAmount = 0;
-app.get('/api/update', function(req, res){ 
+app.post('/api/update', function(req, res){ 
   lastAmount = parseFloat(req.query.amount);
   wattage += lastAmount;
 
-  if (!complete){
-    sockets.forEach(function(socket){
-      socket.emit('update', wattage);
-    });
-  } else{
+  sockets.forEach(function(socket){
+    socket.emit('update', wattage);
+  });
+  if (complete){
 
     // try to guess which device it was
     var devicesCopy = JSON.parse(JSON.stringify(registeredDevices));
     var mostLikelyDevice = devicesCopy.sort(function(a,b){
-      return (Math.abs(a.power - lastAmount) - Math.abs(b.power - lastAmount));
+      return (Math.abs(a.power - Math.abs(lastAmount)) - Math.abs(b.power - Math.abs(lastAmount)));
     }).shift();
     sockets.forEach(function(socket){
       socket.emit(lastAmount > 0 ? 'device.on' : 'device.off', mostLikelyDevice);
@@ -72,7 +71,7 @@ app.get('/api/usage', function(req, res){
 app.get('/api/guess/devices', function(req, res){
   var devicesCopy = JSON.parse(JSON.stringify(devices));
   res.send(200, devicesCopy.sort(function(a, b){
-    return (Math.abs(a.power - lastAmount) - Math.abs(b.power - lastAmount));
+    return (Math.abs(a.power - Math.abs(lastAmount)) - Math.abs(b.power - Math.abs(lastAmount)));
   }).splice(0, 5));
 });
 app.post('/api/device', function(req, res){

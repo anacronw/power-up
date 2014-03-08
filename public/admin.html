@@ -7,20 +7,38 @@
 		 .row{
 		 	margin-bottom: 10px;
 		 }
-		 .device-toggle{
-		 	height: 100px;
+     button{
+        height: 100px;
 		 }
+     body{
+       margin-top: 100px;
+     }
 		 </style>
 		 </head>
 		 <body>
 		 <div class="container-fluid">
 		 	<div class="row">
-		 	<div class="col-xs-4"><button class="btn btn-block btn-lg active device-toggle"> Fan </button></div>
-		 	<div class="col-xs-4"><button class="btn btn-block btn-lg active device-toggle"> Clothing Iron </div>
-		 	<div class="col-xs-4"><button class="btn btn-block btn-lg active device-toggle"> Hairdryer </button></div>
+		 	<div class="col-xs-4"><button class="btn btn-block btn-lg" data-power="50">Fan</button></div>
+		 	<div class="col-xs-4"><button class="btn btn-block btn-lg" data-power="1400">Clothing Iron</div>
+		 	<div class="col-xs-4"><button class="btn btn-block btn-lg" data-power="1000">Hairdryer</button></div>
 		 	</div>
 		 	
 		</div>
+     <script src="javascripts/jquery-2.1.0.min.js"></script>
+     <script>
+      $('button').click(function(){
+        $(this).toggleClass('active');
+        var isOn = $(this).hasClass('active');
+        var itemName = $(this).html();
+        var power = $(this).data('power');
+        if (isOn == false){
+          power = power * -1
+        }
+        $.post('/api/update?amount=' + power, function(response){
+          console.log('successfully posted!');
+        });
+      });
+     </script>
 		 </body>
 
 
