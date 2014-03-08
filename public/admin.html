@@ -4,12 +4,24 @@
 		<title>Admin</title>
 		 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 		 <style type="text/css">
-
+		 .row{
+		 	margin-bottom: 10px;
+		 }
+		 .device-toggle{
+		 	height: 100px;
+		 }
 		 </style>
 		 </head>
 		 <body>
-		 	<div class="col-xs-4"><button class="btn btn-lg btn-block device-btn"></button>
-		 		<input type="text" placeholder="#"></input>
+		 <div class="container-fluid">
+		 	<div class="row">
+		 	<div class="col-xs-4"><button class="btn btn-block btn-lg active device-toggle"> Fan </button></div>
+		 	<div class="col-xs-4"><button class="btn btn-block btn-lg active device-toggle"> Clothing Iron </div>
+		 	<div class="col-xs-4"><button class="btn btn-block btn-lg active device-toggle"> Hairdryer </button></div>
+		 	</div>
+		 	
+		</div>
 		 </body>
+
 
 </html>
