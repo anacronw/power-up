@@ -59,6 +59,7 @@ app.post('/api/update', function(req, res){
 });
 app.post('/api/start', function(req, res){
   complete = false;
+  wattage = 2000;
   res.send(200, 'success');
 });
 app.post('/api/complete', function(req, res){
