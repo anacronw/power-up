@@ -98,5 +98,15 @@
         "name": "Television",
         "power": 600,
         "icon": ""
+    },
+    {
+        "name": "Fan",
+        "power": 50,
+        "icon": ""
+    },
+    {
+        "name": "Clothing Iron",
+        "power": "1400",
+        "icon": ""
     }
 ]
