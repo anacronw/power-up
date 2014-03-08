@@ -1,29 +1,41 @@
 <!doctype html>
 <html>
   <head>
-    <title>Hello!</title>
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <title>Power Up!</title>
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <link rel="stylesheet" href="stylesheets/style.css">
   </head>
   <body>
-	<div class="container-fluid">
-	  <div class="row">
-		  <div id="watts" class="col-xs-12">50</div>		 
-		</div>
-		<div class="row">
-			<dic id="question" class="col-xs-12"> Were these devices turned on? </div>
-
-		<div class="row">
-		  <div class="col-xs-4"><button class="btn btn-lg btn-block device-btn"> Lightbulb </button>   </div>
-		  <div class="col-xs-4"><button class="btn btn-lg btn-block device-btn"> Washing Machine </button></div>
-		  <div class="col-xs-4"><button class="btn btn-lg btn-block device-btn"> Drying Machine </button></div>
-		</div>
-		<div class="row">
-		  <div class="col-xs-4"><button class="btn btn-lg btn-block device-btn"> Microwave </button></div>
-		  <div class="col-xs-4"><button class="btn btn-lg btn-block device-btn"> Refridgerator </button></div>
-		  <div class="col-xs-4"><button class="btn btn-lg btn-block device-btn"> Other </button></div>
-		</div>
-	</div>
-	
-  </body>
-</html>
+    <div class="container-fluid">
+      <div class="page" style="display: block">
+        <div class="jumbotron">
+          <p class="lead">Power Up will track your current energy efficiency by the devices you have at home.</p>
+          <p>Simply go around the house and turn on devices one by one and register them through Power Up.</p>
+          <button id="start-btn" class="btn btn-primary btn-lg btn-block">Try it Now!</button>
+        </div>
+      </div>
+      <div class="page">
+        <div class="row">
+          <div id="watt-container" class="col-xs-12">
+            <h3>Current Usage:</h3>
+            <span id="watts"></span>W
+          </div>		 
+        </div>
+        <div class="row"><div id="question" class="col-xs-12">(Turn on a device in your home)</div></div>
+        <div class="row" id="buttons-container">
+        </div>
+        <button id="continue-btn" class="btn btn-primary btn-lg btn-block">I'm done</button>
+      </div>
+      <div class="page">
+        <canvas id="line-analysis" width="600" height="400"></canvas>
+        <canvas id="pie-analysis" width="600" height="400"></canvas>
+      </div>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="javascripts/moment.min.js"></script>
+      <script src="javascripts/Chart.min.js"></script>
+      <script src="javascripts/jquery-2.1.0.min.js"></script>
+      <script src="javascripts/bootstrap.min.js"></script>
+      <script src="javascripts/jquery.bootstrap-growl.min.js"></script>
+      <script src="javascripts/main.js"></script>
+    </body>
+  </html>
