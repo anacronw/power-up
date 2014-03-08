@@ -1,21 +1,27 @@
-#watts {
-	font-size: 100px;
-	text-align: center;
-	color: green;
+body {
+  text-align: center;
 }
 .device-btn{
-	height: 100px;
-	color: green;
-	background-color: lightgray;
-}
-.row{
-	margin-bottom: 5px;
+	height: 120px;
+  margin: 20px 0;
 }
 #question{
-	font-size: 35px;
 	text-align: center;
-	color: green;
 }
-body{
-	background-color: black;
+.page {
+  padding: 50px 0;
+  display: none;
+}
+#watt-container{
+  text-align: center;
+}
+#watts{
+  font-size: 100px;
+}
+#start-btn, #continue-btn {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+#buttons-container {
+  height: 200px;
 }

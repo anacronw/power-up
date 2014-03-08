@@ -1,12 +1,12 @@
 [
     {
         "name": "Hairdryer",
-        "power": 100,
+        "power": 1000,
         "icon": ""
     },
     {
         "name": "Lightbulb",
-        "power": 5,
+        "power": 8,
         "icon": ""
     },
     {
@@ -16,47 +16,47 @@
     },
     {
         "name": "Computer",
-        "power": 100,
+        "power": 9000,
         "icon": ""
     },
     {
-        "name": "Microwave",
-        "power": 25,
+        "name": "Microwave Oven",
+        "power": 1450,
         "icon": ""
     },
     {
         "name": "Refridgerator",
-        "power": 50,
+        "power": 700,
         "icon": ""
     },
     {
         "name": "Phone Charger",
-        "power": 30,
+        "power": 10,
         "icon": ""
     },
     {
         "name": "Vacuum Cleaner",
-        "power": 35,
+        "power": 650,
         "icon": ""
     },
     {
         "name": "Curling Iron",
-        "power": 55,
+        "power": 800,
         "icon": ""
     },
     {
         "name": "Washing Machine",
-        "power": 90,
+        "power": 500,
         "icon": ""
     },
     {
         "name": "Rice Cooker",
-        "power": 70,
+        "power": 630,
         "icon": ""
     },
     {
         "name": "Blender",
-        "power": 30,
+        "power": 300,
         "icon": ""
     },
     {
@@ -65,8 +65,8 @@
         "icon": ""
     },
     {
-        "name": "Drying Machine",
-        "power": 80,
+        "name": "Clothes Dryer",
+        "power": 5000,
         "icon": ""
     },
     {
@@ -76,27 +76,27 @@
     },
     {
         "name": "Coffee Machine",
-        "power": 25,
+        "power": 900,
         "icon": ""
     },
     {
         "name": "Electric Stove",
-        "power": 60,
+        "power": 2000,
         "icon": ""
     },
     {
         "name": "Toaster",
-        "power": 35,
+        "power": 800,
         "icon": ""
     },
     {
         "name": "Air Conditioner",
-        "power": 55,
+        "power": 2200,
         "icon": ""
     },
     {
         "name": "Television",
-        "power": 100,
+        "power": 600,
         "icon": ""
     }
 ]
