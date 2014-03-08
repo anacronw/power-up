@@ -2,111 +2,111 @@
     {
         "name": "Hairdryer",
         "power": 1000,
-        "icon": ""
+        "icon": "fa-bullhorn"
     },
     {
         "name": "Lightbulb",
         "power": 8,
-        "icon": ""
+        "icon": "fa-lightbulb-o"
     },
     {
         "name": "Printer",
         "power": 60,
-        "icon": ""
+        "icon": "fa-print"
     },
     {
         "name": "Computer",
         "power": 9000,
-        "icon": ""
+        "icon": "fa-laptop"
     },
     {
         "name": "Microwave Oven",
         "power": 1450,
-        "icon": ""
+        "icon": "fa-toggle-right"
     },
     {
         "name": "Refrigerator",
         "power": 700,
-        "icon": ""
+        "icon": "fa-cutlery"
     },
     {
         "name": "Phone Charger",
         "power": 10,
-        "icon": ""
+        "icon": "fa-rupee"
     },
     {
         "name": "Vacuum Cleaner",
         "power": 650,
-        "icon": ""
+        "icon": "fa-cloud"
     },
     {
         "name": "Curling Iron",
         "power": 800,
-        "icon": ""
+        "icon": "fa-magic"
     },
     {
         "name": "Washing Machine",
         "power": 500,
-        "icon": ""
+        "icon": "fa-square"
     },
     {
         "name": "Rice Cooker",
         "power": 630,
-        "icon": ""
+        "icon": "fa-minus-square-o"
     },
     {
         "name": "Blender",
         "power": 300,
-        "icon": ""
+        "icon": "fa-undo"
     },
     {
         "name": "Electric Razor",
         "power": 20,
-        "icon": ""
+        "icon": "fa-circle-o"
     },
     {
         "name": "Clothes Dryer",
         "power": 5000,
-        "icon": ""
+        "icon": "fa-minus-square"
     },
     {
         "name": "Nightlight",
         "power": 5,
-        "icon": ""
+        "icon": "fa-moon-o"
     },
     {
         "name": "Coffee Machine",
         "power": 900,
-        "icon": ""
+        "icon": "fa-coffee"
     },
     {
         "name": "Electric Stove",
         "power": 2000,
-        "icon": ""
+        "icon": "fa-fire"
     },
     {
         "name": "Toaster",
         "power": 800,
-        "icon": ""
+        "icon": "fa-credit-card"
     },
     {
         "name": "Air Conditioner",
         "power": 2200,
-        "icon": ""
+        "icon": "fa-cogs"
     },
     {
         "name": "Television",
         "power": 600,
-        "icon": ""
+        "icon": "fa-desktop"
     },
     {
         "name": "Fan",
         "power": 50,
-        "icon": ""
+        "icon": "fa-bullseye"
     },
     {
         "name": "Clothing Iron",
         "power": 1400,
-        "icon": ""
+        "icon": "fa-inbox"
     }
 ]
