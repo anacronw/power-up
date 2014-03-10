@@ -49,7 +49,7 @@ socket.on('update', function(newWattage){
   wattage = newWattage;
   console.log(wattage);
   $.getJSON('/api/guess/devices', function(devices){
-    $('#question').html('Did you turn one of these on?').toggleClass('text-success');
+    $('#question').html('Did you turn one of these on?').addClass('text-success');
     $('#buttons-container').empty();
     devices.forEach(function(device){
       $('#buttons-container').append('<div class="col-xs-4"><button class="btn btn-info btn-lg btn-block device-btn slideUp" data-name="' + device.name + '">' + device.name + '<br /><i class="fa ' + device.icon + '"></i></button></div>');
@@ -58,7 +58,7 @@ socket.on('update', function(newWattage){
     $('#buttons-container').hide().fadeIn(1000);
     $('.device-btn').click(function(){
         $.post('/api/device', {name: $(this).data('name')}, function(){
-          $('#question').html('Great!  Let\'s do another one! <br /> (Turn on another device)').toggleClass('text-success');
+          $('#question').html('Great!  Let\'s do another one! <br /> (Turn on another device)').removeClass('text-success');
           $('#buttons-container').empty();
         });
     });
